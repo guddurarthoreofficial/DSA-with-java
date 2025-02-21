@@ -57,5 +57,25 @@ class ArrayList{
         Collections.sort(list);
 
         System.out.println("Sorted list: "+list);
+
+
+
+
+
+        
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
