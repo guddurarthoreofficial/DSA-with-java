@@ -1,23 +1,31 @@
-import java.util.ArrayList;
-
 class Solution {
-    public ArrayList<Integer> reverseArray(int arr[]) {
-        ArrayList<Integer> newArr = new ArrayList<>();
+    public static void moveZeroes(int[] nums) {
 
-        // code here
-        for (int i = arr.length-1; i >= 0; i--) {
-            newArr.add(arr[i]);
+        int n = nums.length;
+
+        int index = 0;
+        for(int i = 0; i < nums.length; i++){
+            if( nums[i] == 0){
+                index ++;
+            }
+            else if (nums[i] != 0){
+                nums[index] = nums[i] ;
+                index ++;
+            }
+            
         }
 
-        return newArr;
+        for(int i = 0; i < nums.length; i++){
+            System.out.print(nums[i] + " ");
+        }
+
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        int arr[] = { 1, 3, 25, 7, 67, 53, 4 };
-
-        ArrayList<Integer> reversedArray = solution.reverseArray(arr);
-        System.out.println(reversedArray);
+        int nums[] = {1,2 ,0 ,3 ,5 ,0 , 4, 2};
+        moveZeroes(nums);
+    
+        
+        
     }
-
 }
