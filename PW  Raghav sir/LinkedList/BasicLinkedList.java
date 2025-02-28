@@ -20,12 +20,30 @@ public class BasicLinkedList {
         }
     }
 
-    // print data recursevely
+ 
+    // Print data recursively
     public static void DisplayRecusively(Node head) {
-        System.out.println(head.data);
-        if (head == null) return;
+        if (head == null) return; // Base case to stop recursion
+        System.out.print(head.data+ " -> ");
         DisplayRecusively(head.next);
-     }
+    }
+
+    // Print data in reverse order
+    public static void DisplayReverse(Node head) {
+        if (head == null) return; // Base case to stop recursion
+        DisplayReverse(head.next ); // Corrected function name
+        System.out.print(head.data + " <- ");
+    }
+
+    // print length of Node;
+    public static int lengthOfNode(Node head){
+        int count = 0;
+        while (head != null) {
+            count ++;
+            head = head.next;
+        }
+        return count;
+    }
 
     public static void main(String[] args) {
         Node a = new Node(1);
@@ -39,18 +57,18 @@ public class BasicLinkedList {
         c.next = d;
         d.next = e;
 
-        //print data 
+        // print data
         DisplayRecusively(a);
+        System.out.println();
+        DisplayReverse(a);
+        System.out.println();
+        Display(a);
 
-        // Display(a);
+        // print length;
+        System.out.println();
+        System.out.println("Length of LinkedList : "+lengthOfNode(a));
+
         // System.out.println();
-
-
-
-
-
-
-
 
         // for (int i = 0; i < 4; i++){
         // System.out.println(head.data);
