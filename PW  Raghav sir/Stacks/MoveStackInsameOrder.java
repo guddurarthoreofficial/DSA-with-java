@@ -33,8 +33,11 @@ public class MoveStackInsameOrder {
         Stack<Integer> st2= new Stack<>();
 
         while (st.size() > 0) {
+            // st2.push(st.peek());
+            // st.pop();
+
             st2.push(st.peek());
-            st.pop();
+
         }
         
         System.out.println(st2);
@@ -44,8 +47,11 @@ public class MoveStackInsameOrder {
         // print stack in same Order 
         Stack<Integer> st3 = new Stack<>();
         while (st2.size() > 0) {
-            st3.push(st2.peek());
-            st2.pop();
+            // st3.push(st2.peek());
+            // st2.pop();
+            st3.push(st2.pop());
+
+
         }
 
         System.out.println(st3);
