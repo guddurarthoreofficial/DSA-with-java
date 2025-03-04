@@ -50,8 +50,6 @@ public class MoveStackInsameOrder {
             // st3.push(st2.peek());
             // st2.pop();
             st3.push(st2.pop());
-
-
         }
 
         System.out.println(st3);
