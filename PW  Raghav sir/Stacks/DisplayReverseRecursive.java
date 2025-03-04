@@ -3,24 +3,21 @@
 
 import java.util.Stack;
 public class DisplayReverseRecursive {
-    // package Stacks;
 
-
-    public static Stack<Integer> displayRecursively(Stack<Integer> st) {
-       
-        if(st.size() == 0) return st;
-        int data = st.pop();
-        System.out.print(data +" ");
+    public static void displayRecursively(Stack<Integer> st) {
+        int top = st.pop();
+        // System.out.println(top);
+        if (st.size() == 0) return;
         displayRecursively(st);
-        st.push(data);
-        return st;
+        System.out.print(top+" ");
+        st.push(top);
+        return;
     }
     
 
     public static void main(String[] args) {
         InsertAtButtom ib = new InsertAtButtom();
         Stack<Integer> st = new Stack<>();
-
         
         st.push(2);
         st.push(3);
@@ -29,7 +26,7 @@ public class DisplayReverseRecursive {
         st.push(12);
 
         System.out.println("original stack : " + st);
-        System.out.println(displayRecursively(st));
+        displayRecursively(st);
 
     }
 }
